@@ -1,0 +1,176 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%% Copyright 2014 Griffin Smith (wildgriffin45@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+
+% moderncv themes
+% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{red}
+% to set the default font; use '\sfdefault' for the default sans serif font,
+% '\rmdefault' for the default roman one, or any tex font name
+%\renewcommand{\familydefault}{\sfdefault}
+\nopagenumbers{}
+
+% character encoding
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+% if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{2.6cm}
+% for the 'classic' style, if you want to force the width allocated to your name and avoid
+% line breaks. be careful though, the length is normally calculated to avoid any overlap with
+% your personal info; use this at your own typographical risks...
+%\setlength{\makecvtitlenamewidth}{10cm}
+
+% personal data
+\name{Griffin}{Smith}
+\title{Software Developer}
+\address{5113 Williams Fork Tr. Apt 205}{Boulder, CO 80301}
+\phone[mobile]{(303) 476-0811}
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{wildgriffin45@gmail.com}
+\homepage{http://griffinsmith.me}
+\extrainfo{References/code samples available upon request}
+\photo[64pt][0pt]{chimera}
+%\quote{Some quote}
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if
+% you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY
+% THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+
+\newcommand{\reference}[3]{
+    \item \textbf{#1}\newline{}
+    #2 \newline{}
+    \textit{#3}\newline{}}
+\makecvtitle{}
+
+% \section{Education}
+% arguments 3 to 6 can be left empty
+% \cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+% \cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
+\section{Skills}
+\cvitem{Unix/Linux}{Deep knowledge of distributed systems
+    administration in Linux using bash and git, experience
+    administrating PaaS clouds such as Heroku, and passion for
+    the Unix philosophy of discrete, composable units of functionality}
+\cvitem{Python}{Strong background in Python, not only in developing using existing
+    libraries but utilizing the full features of the language such
+    as magic functions to develop new libraries and frameworks}
+\cvitem{Javascript}{Experience developing real-time responsive single-page web applications
+    using Express on Node.js and Ember with Socket.io, in addition to Meteor}
+\cvitem{PHP}{Enterprise experience developing large, widely-used, and highly available
+    performance-driven production PHP web applications}
+\cvitem{SQL}{Deep understanding of relational databases, including experience designing the
+    database schema for an application with over a decade of usage, hundreds of gigabytes of
+    data, and complex, multi-tiered hierarchical data structures, and writing and optimizing
+    large, complex queries against that database}
+\cvitem{NoSQL}{Experience with agile, flexible database development using MongoDB}
+\cvitem{Vim}{Incredibly passionate about how the vim editor is the shortest path from thought
+    to code. Experience scripting the editor and contributor to several major open-source
+    plugins}
+
+\section{Experience}
+\subsection{Employment}
+\cventry{2013--2014}{Associate Developer}{Visionlink Inc.}{Boulder, CO}{}
+    {Integral member of an agile development team building the nation's most-used Information
+    and Referral platform for organizations like United Way Worldwide and the American Red
+    Cross\newline{}
+\begin{itemize}
+\item Refactored and revamped legacy code to increase performance and long-term
+    maintainablity;
+\item Worked on several triage-teams to rapidly fix production bugs with strict deadlines;
+\item Built a complex, yet highly-performant tool for searching human services by category;
+\item Integral designer and developer of a major product revamp:
+  \begin{itemize}
+  \item Drove a complete rethinking of the data model in the product, which lead to increased
+        unification, simplicity, and consistency;
+  \item Championed the adoption of a unit testing-driven development model;
+  \item Drove product documentation and code standardization;
+  \end{itemize}
+\end{itemize}}
+\cventry{2012--2013}{Sales Engineer}{Visionlink Inc.}{Boulder, CO}{}
+    {Auxiliary, non-core development team member writing mobile and local desktop
+    applications to augment the core product\newline{}}
+\cventry{2012-present}{CTO}{Tangent, Inc.}{Boulder, CO}{}
+    {Sole developer in a startup of two developing the future of online communication using
+    Node.js, Ember, and MongoDB}
+\cventry{2011--2012}{Software Tester}{Quantellia Inc.}{Lakewood, CO}{}
+    {Lead the software testing team and administrated the issue tracker}
+\subsection{Contracting}
+\cventry{2012}{Data Migration}{Lee Salminen}{Boulder, CO}{}
+    {Task performing complex topological relational database migration between Magento and
+    Opencart}
+%
+% \section{References}
+% \cvitem{}{\begin{itemize}
+%     \reference{W. Douglas Zimmerman}{CEO, Visionlink Inc.}{zimmerman@visionlink.org}
+%     \reference{Justin Rodda}{Development Manager, Visionlink Inc.}{rodda@visionlink.org}
+%     \reference{Mark Zangari}{CEO, Quantellia Inc.}{mark.zangari@quantellia.com}
+%     \reference{Lorien Pratt}{CTO, Quantellia Inc.}{lorien.pratt@quantellia.com}
+%     \reference{Lee Salminen}{Lee Salminen Consulting, LLC}{lee.salminen@gmail.com}
+% \end{itemize}}
+%
+% \section{Hobbies}
+% \cvitem{}{\begin{itemize}
+%     \item Music Production
+%     \item Bicycling
+% \end{itemize}}
+%
+% \section{Extra 1}
+% \cvlistitem{Item 1}
+% \cvlistitem{Item 2}
+% \cvlistitem{Item 3. This item is particularly long and therefore normally spans over several
+%     lines. Did you notice the indentation when the line wraps?}
+%
+% \section{Extra 2}
+% \cvlistdoubleitem{Item 1}{Item 4}
+% \cvlistdoubleitem{Item 2}{Item 5}
+% \cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is
+%     particularly long to wrap over several lines.}
+% \clearpage
+%
+% %-----       letter       ---------------------------------------------------------
+% % recipient data
+% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+% \date{April 19, 2014}
+% \opening{Dear Sir or Madam,}
+% \closing{Signed,}
+% \enclosure[Attached]{Resum\'{e}}
+% \makelettertitle{}
+%
+% This is a cover letter
+%
+% \makeletterclosing{}
+%
+\end{document}
+
+
+%% end of file `template.tex'.
+% vim: set tw=95 colorcolumn=-1:
+
